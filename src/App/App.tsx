@@ -32,21 +32,22 @@ const App = () => {
 
   return (
     <Mainbox>
-      <div className="spaceEscolha">
-        <div>Lista de Produtos</div>
-        <div>
+        <h1>Lista de Produtos</h1>
+        <div className="searchSpace">
           <input value={produto} onChange={(event) => {
             setProduto(event.target.value)
           }} />
-          <button onClick={adicionarProduto} >Inserir</button>
-          <button onClick={deletarProduto} >Deletar</button>
-          <button onClick={limparProduto} >Limpar</button>
+          <button className="inserir" onClick={adicionarProduto} >Inserir</button>
         </div>
-        <div>Numero de Items: {count}</div>
+      <div className="spaceEscolha">
+        <button onClick={deletarProduto} >Deletar</button>
+        <button onClick={limparProduto} >Limpar</button>
+        <h2>Numero de Items: {count}</h2>
+        <hr></hr>
+        {produtos.map((nm) =>(
+          <h3>{nm}</h3>
+        ))}
       </div>
-      {produtos.map((nm) =>(
-        <div>{nm}</div>
-      ))}
     </Mainbox>
   );
 }
