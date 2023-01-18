@@ -5,4 +5,8 @@ export const Mainbox = styled.div`
     flex-direction: column;
     align-items: center;
     color: white;
+
+    .spaceEscolha{
+        display: block;
+    }
 `;
